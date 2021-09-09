@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>rkn motivator</title>
+	<script src = "main.js"></script>
+</head>
+<body>
+	<div style = "line-height: 0; font-size: 200%;">
+		<h1>RKN MOTIVATOR</h1>
+		<h3>A motivate-the-dev clicker*</h3>
+		<h6>*Not an idle miner</h6>
+	</div>
+	<img src = "https://cdn.discordapp.com/avatars/125238867598114816/bfe3225f9406346907bd55eb89073175.png?size=128" style = "transform: scaleX(-1)">
+	<h3 id="fundsCounter"></h3>
+	<h3 id="motivationCounter"></h3>
+	<p id="intro">^^^ This is rkn. rkn is a game developer. rkn has a game which is supposed to release this year, but which is going slowly. Help rkn stay motivated by clicking below!</p>
+	<div id="pats">
+		<button id="patButton" onclick = "motivate(1); document.getElementById('intro').remove(); document.getElementById('patButton').setAttribute('onclick', 'motivate(1);')">Give rkn a pat for his good work so far</button>
+	</div>
+</body>
+</html>
