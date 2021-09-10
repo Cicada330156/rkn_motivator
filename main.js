@@ -12,8 +12,12 @@ function updateCounters(){
 }
 
 upgrades = [//name, shown, cost, motivation, description
-["coffee", false, 10, 3, "Give rkn a coffee to keep him awake."],
-["adderall", false, 100, 10, "Give rkn adderall so, i dunno, he can be more like Elon Musk I guess."]
+	["coffee", false, 10, 3, "Give rkn a coffee to keep him awake."],
+	["adderall", false, 100, 10, "Give rkn adderall so, i dunno, he can be more like Elon Musk I guess."],
+	["tacoShack", false, 1000, 2, "Have rkn play tacoshack. He then becomes addicted though, so it's not very effective."],
+	["pupper", false, 1500, 25, "Let rkn pet Vincent. It's very effective."],
+
+	["mystery", false, (Math.round(Math.random() * 60000) + 2000), (Math.round(Math.random() * 35) + 15), "Provide rkn with a mystery substance. It probably does something special."]
 ];
 function checkForUpgrades() {
 	for (i = 0; i < upgrades.length; i++) {
@@ -25,7 +29,7 @@ function checkForUpgrades() {
 }
 
 function buy(id) {
-	if (funds > upgrades[id][2]) {//checks to see if it's affordable. If so, the purchase is made.
+	if (funds >= upgrades[id][2]) {//checks to see if it's affordable. If so, the purchase is made.
 		funds -= upgrades[id][2]
 		document.getElementById(upgrades[id][0]).innerHTML = "<button id = '" + upgrades[id][0] + "Button' onclick = 'motivate(" + upgrades[id][3] + ")'>" + upgrades[id][4] + " (" + upgrades[id][3] + ")</button>"
 		updateCounters();
